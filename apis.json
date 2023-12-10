@@ -1,0 +1,29 @@
+{
+    "name": "Backstage and APIs.json Exploration",
+    "description": "This is an exploration of what is possible when you marry APIs.json with Backstage.",
+    "image": "https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+    "url": "https://raw.githubusercontent.com/apis-json/backstage/main/apis.json",
+    "created": "2023/12/10",
+    "modified": "2023/12/10",
+    "specificationVersion": "0.16",
+    "tags": [
+      "APIs",
+      "Discovery",
+      "Backstage",
+      "Portal",
+      "Catalog"
+    ],
+    "apis": [],
+    "maintainers": [
+      {
+        "FN": "API Evangelist",
+        "email": "info@apievangelist.com"
+      }
+    ],
+    "includes": [
+        {
+        "name": "Twilio",
+        "url": "https://raw.githubusercontent.com/apis-json/artisanal/main/apis/twilio.json"
+        }
+      ]    
+  }
