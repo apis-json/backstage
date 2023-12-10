@@ -1,5 +1,5 @@
 # Backstage
-Backstage is an open platform for building developer portals. Powered by a centralized software catalog, Backstage restores order to your microservices and infrastructure and enables your product teams to ship high-quality code quickly without compromising autonomy. Backstage unifies all your infrastructure tooling, services, and documentation to create a streamlined development environment from end to end.
+[Backstage](https://backstage.io/) is an open platform for building developer portals. Powered by a centralized software catalog, Backstage restores order to your microservices and infrastructure and enables your product teams to ship high-quality code quickly without compromising autonomy. Backstage unifies all your infrastructure tooling, services, and documentation to create a streamlined development environment from end to end.
 
 ## Backstage + APIs.json
 This an exploration of what is possible when you marry Backstage and the APIs.json format. Backstage is driven by entity files defined as YAML published to GitHub repositories. This repository intends to pull and APIs.json files listed in the local APIs.json index within this repository, and translate into Backstage entities. 
@@ -140,7 +140,19 @@ All System, API, and Component entities are then saved to the underlying reposit
 Once generated, the Backstage entities generated from the APIs.json and published to this repository can be included in the configuration for any Backstage implementation, pulling the entities into the API catalog.
 ```
      - type: url
-       target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
+       target: https://github.com/apis-json/backstage/
        rules:
-         - allow: [User, Group]
+         - allow: [System, API, Component]
 ```
+All Backstage entities will be pulled regularly as part of the instance, and any entities will be added to the catalog, or updated when any changes occur int he YAML.
+
+## Backstage Catalog
+Once the YAML for any repository is added to a catalog, all of the entities will be made available as part of the catalog, and available for search, filtering, and exploring via the relationships.
+![backstage](backstage-1.png)
+![backstage](backstage-2.png)
+![backstage](backstage-3.png)
+
+## Next Steps
+This repository was just about exploring what is possible when marrying Backstage and APIs.json, documenting how this would work. Next, we need to write the JavaScript and GitHub actions for running the JavaScript on commit to this repository.
+
+Once we have the JavaScript and pipeline running we will add all of the APIs.json indexed as part of the APIs.io search and produce the entities to include all the APIs and their properties into a single catalog--demonstrating how it can be used to keep a Backstage powered API catalog up to date with internal or external APIs.
