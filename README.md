@@ -148,9 +148,10 @@ All Backstage entities will be pulled regularly as part of the instance, and any
 
 ## Backstage Catalog
 Once the YAML for any repository is added to a catalog, all of the entities will be made available as part of the catalog, and available for search, filtering, and exploring via the relationships.
-![backstage](backstage-1.png)
-![backstage](backstage-2.png)
-![backstage](backstage-3.png)
+
+![backstage](images/backstage-1.png)
+![backstage](images/backstage-2.png)
+![backstage](images/backstage-3.png)
 
 ## Next Steps
 This repository was just about exploring what is possible when marrying Backstage and APIs.json, documenting how this would work. Next, we need to write the JavaScript and GitHub actions for running the JavaScript on commit to this repository.
